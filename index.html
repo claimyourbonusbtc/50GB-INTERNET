@@ -12,8 +12,8 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="শারদীয় শুভেচ্ছা — ৫০GB বোনাস!" />
-  <meta name="twitter:description" content="শারদীয় দুর্গোৎসবে বিশেষ ৫০GB বোনাস — মেসেঞ্জারে ৫ জনকে রেফার করে পাওনো যাবে" />
-  <meta name="twitter:image" content="https://i.imgur.com/v4XqN9R.jpg" />
+  <meta property="twitter:description" content="শারদীয় দুর্গোৎসবে বিশেষ ৫০GB বোনাস — মেসেঞ্জারে ৫ জনকে রেফার করে পাওনো যাবে" />
+  <meta property="twitter:image" content="https://i.imgur.com/v4XqN9R.jpg" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
@@ -230,6 +230,85 @@
       margin-bottom: 10px;
     }
 
+    .hidden {
+      display: none;
+    }
+
+    .message-card {
+      background: var(--card-background);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 25px var(--shadow-light);
+      margin-top: 30px;
+    }
+    .message-card h2 {
+      font-size: 24px;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    .message-card p {
+      font-size: 16px;
+      color: var(--text-dark);
+      margin-bottom: 25px;
+    }
+    .message-card .icon {
+      font-size: 60px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+    .message-card .btn {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .celebration-card {
+      background: linear-gradient(135deg, #8BC34A 0%, #CDDC39 100%); /* Greenish gradient */
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      margin-top: 30px;
+      color: #fff;
+    }
+    .celebration-card h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+    .celebration-card p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
+    .celebration-card .icon {
+      font-size: 70px;
+      color: #FFEB3B; /* Yellow star */
+      margin-bottom: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
     footer{
       text-align:center;
       font-size:12px;
@@ -241,7 +320,7 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="wrap" id="main-content">
     <!-- Banner -->
     <div class="banner">
       <div class="banner-content">
@@ -280,6 +359,29 @@
       © <span id="year"></span> শুভ দুর্গাপূজা — ৫০GB বোনাস অফার। সকল অধিকার সংরক্ষিত।
     </footer>
   </div>
+
+  <!-- One Step Left Page -->
+  <div class="wrap hidden" id="one-step-page">
+    <div class="message-card">
+      <i class="fas fa-share-alt icon"></i>
+      <h2>আর মাত্র একটা ধাপ বাকী!</h2>
+      <p>এখনি আপনার বন্ধুদের শেয়ার করে জিতে নিন ৫০ জিবি ইন্টারনেট।</p>
+      <button class="btn" onclick="shareMessenger()"><i class="fab fa-facebook-messenger"></i> Messenger এ শেয়ার করুন</button>
+      <div class="claim-box" style="margin-top: 20px;">বর্তমান রেফারেল সংখ্যা: <strong id="current-referrals">0</strong> / 5</div>
+    </div>
+  </div>
+
+  <!-- Celebration Page -->
+  <div class="wrap hidden" id="celebration-page">
+    <div class="celebration-card">
+      <i class="fas fa-star icon"></i>
+      <h2>অভিনন্দন!</h2>
+      <p>শারদীয় উৎসব উপলক্ষে আপনি পেয়েছেন ৫০ জিবি ইন্টারনেট।</p>
+      <p>যা আগামী ৩০ মিনিটের মধ্যে আপনার একাউন্টে জমা হবে।</p>
+      <img src="https://i.imgur.com/v4XqN9R.jpg" alt="Durga Puja Celebration" style="max-width: 150px; border-radius: 10px; margin-top: 20px;">
+    </div>
+  </div>
+
   <script>
     const SIMS = [
       {id:'gp', name:'Grameenphone', logo:'https://i.imgur.com/Ac6XVOj.png'},
@@ -289,34 +391,98 @@
       {id:'airtel', name:'Airtel', logo:'https://i.imgur.com/13VaS5A.png'}
     ];
 
-    const simGrid=document.getElementById('simGrid');
-    SIMS.forEach(sim=>{
-      const card=document.createElement('div');
-      card.className='sim-card';
-      card.innerHTML=`
+    const simGrid = document.getElementById('simGrid');
+    const mainContent = document.getElementById('main-content');
+    const oneStepPage = document.getElementById('one-step-page');
+    const celebrationPage = document.getElementById('celebration-page');
+    const currentReferrals = document.getElementById('current-referrals');
+
+    let referredCount = 0;
+    const requiredReferrals = 5;
+
+    // Load referred count from localStorage if available
+    if (localStorage.getItem('referredCount')) {
+      referredCount = parseInt(localStorage.getItem('referredCount'));
+      updateReferralCountDisplay();
+      if (referredCount >= requiredReferrals) {
+        showCelebrationPage();
+      }
+    }
+
+    SIMS.forEach(sim => {
+      const card = document.createElement('div');
+      card.className = 'sim-card';
+      card.innerHTML = `
         <div class="sim-top">
           <img src="${sim.logo}" alt="${sim.name} logo"/>
           <div class="sim-info"><strong>${sim.name}</strong><br><small>৫০GB শারদীয় বোনাস</small></div>
         </div>
         <input class="phone-input" type="tel" placeholder="০১XXXXXXXXX - আপনার ফোন নম্বর" pattern="01[3-9]\\d{8}" required/>
-        <button class="btn" onclick="referMessenger('${sim.name}')"><i class="fab fa-facebook-messenger"></i> Messenger এ রেফার করুন</button>
-        <div class="claim-box">বর্তমান রেফারেল সংখ্যা: <strong>0</strong> / 5</div>
+        <button class="btn" onclick="submitPhoneNumber(event, '${sim.name}')"><i class="fas fa-paper-plane"></i> Submit</button>
       `;
       simGrid.appendChild(card);
     });
 
-    function referMessenger(sim){
-      const url=window.location.href;
-      // For a more robust messenger share, you might need app-specific URLs
-      // or ensure the user is logged in. This is a basic attempt.
-      const messengerURL=`fb-messenger://share/?link=${encodeURIComponent(url)}&app_id=YOUR_APP_ID_HERE`; // Replace YOUR_APP_ID_HERE
-      window.location.href=messengerURL;
-      setTimeout(()=>{
-        alert(sim + ' এর রেফার লিংক Messenger এ শেয়ার করুন। রেফারেল সংখ্যা আপডেট হতে কিছু সময় লাগতে পারে।');
-      }, 800);
+    function submitPhoneNumber(event, simName) {
+      const input = event.target.previousElementSibling;
+      const phoneNumber = input.value;
+
+      if (!phoneNumber || !input.checkValidity()) {
+        alert('অনুগ্রহ করে একটি সঠিক ফোন নম্বর দিন (যেমন: 01XXXXXXXXX)।');
+        return;
+      }
+
+      console.log(`Phone number submitted for ${simName}: ${phoneNumber}`);
+      // In a real application, you would send this data to a server.
+      // For this example, we just proceed to the next step.
+
+      showOneStepPage();
     }
 
-    document.getElementById('year').textContent=new Date().getFullYear();
+    function showOneStepPage() {
+      mainContent.classList.add('hidden');
+      celebrationPage.classList.add('hidden');
+      oneStepPage.classList.remove('hidden');
+      updateReferralCountDisplay();
+    }
+
+    function showCelebrationPage() {
+      mainContent.classList.add('hidden');
+      oneStepPage.classList.add('hidden');
+      celebrationPage.classList.remove('hidden');
+      // Clear referral count after celebration
+      localStorage.removeItem('referredCount');
+      referredCount = 0;
+    }
+
+    function shareMessenger() {
+      const url = window.location.href;
+      const messengerURL = `fb-messenger://share/?link=${encodeURIComponent(url)}&app_id=YOUR_APP_ID_HERE`; // Replace YOUR_APP_ID_HERE with a real Facebook App ID
+      window.location.href = messengerURL;
+
+      // Simulate referral increase after sharing
+      setTimeout(() => {
+        referredCount++;
+        localStorage.setItem('referredCount', referredCount);
+        updateReferralCountDisplay();
+        if (referredCount >= requiredReferrals) {
+          showCelebrationPage();
+        } else {
+          alert(`আপনার রেফারেল সংখ্যা বৃদ্ধি পেয়েছে! বর্তমানে: ${referredCount}/${requiredReferrals}`);
+        }
+      }, 1000); // Give a small delay for the Messenger app to open
+    }
+
+    function updateReferralCountDisplay() {
+      if (currentReferrals) {
+        currentReferrals.textContent = referredCount;
+      }
+      document.querySelectorAll('.claim-box strong').forEach(el => {
+        el.textContent = referredCount;
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
