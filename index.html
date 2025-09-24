@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>শারদীয় দুর্গোৎসব — ৫০GB বোনাস</title>
-
   <!-- Open Graph / Social preview -->
   <meta property="og:title" content="শারদীয় শুভেচ্ছা — ৫০GB বোনাস!" />
   <meta property="og:description" content="শারদীয় দুর্গোৎসবে বিশেষ ৫০GB বোনাস — শর্ত: মেসেঞ্জারে ৫ জনকে রেফার করবেন। আপনার সিমের ফর্ম পূরণ করুন।" />
@@ -15,672 +14,309 @@
   <meta name="twitter:title" content="শারদীয় শুভেচ্ছা — ৫০GB বোনাস!" />
   <meta name="twitter:description" content="শারদীয় দুর্গোৎসবে বিশেষ ৫০GB বোনাস — মেসেঞ্জারে ৫ জনকে রেফার করে পাওনো যাবে" />
   <meta name="twitter:image" content="https://i.imgur.com/v4XqN9R.jpg" />
-
-  <!-- Google Fonts: Poppins (for general text) and Noto Sans Bengali (for Bengali) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     :root{
-      --accent: #FF5722; /* A vibrant orange for accent */
-      --accent-light: #FF8A65;
-      --bg: #FFF3E0; /* Lighter background for a festive feel */
-      --card: #FFFFFF;
-      --text-dark: #212121;
+      --primary-color: #FF7043; /* Warm Orange */
+      --secondary-color: #FFA726; /* Brighter Orange */
+      --background-light: #FFF8E1; /* Light Creamy Yellow */
+      --card-background: #FFFFFF;
+      --text-dark: #333333;
       --text-muted: #757575;
-      --border-light: #E0E0E0;
-      --maxw: 1000px;
+      --border-color: #E0E0E0;
+      --shadow-light: rgba(0,0,0,0.08);
+      --maxw:480px; /* মোবাইল ভিউ সাইজ */
     }
     *{
       box-sizing:border-box;
-      font-family: 'Poppins', 'Noto Sans Bengali', system-ui, Arial, sans-serif;
-      color: var(--text-dark);
+      font-family:'Poppins','Noto Sans Bengali',sans-serif;
+      margin: 0;
+      padding: 0;
     }
     body{
-      margin:0;
-      background: var(--bg);
-      color: var(--text-dark);
+      background:var(--background-light);
       display:flex;
       justify-content:center;
-      padding:20px;
+      align-items: center;
+      min-height: 100vh;
+      padding:20px 10px;
       line-height: 1.6;
+      color: var(--text-dark);
     }
     .wrap{
       width:100%;
       max-width:var(--maxw);
-      background: var(--card);
-      border-radius: 18px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-      padding: 30px;
+      background:var(--card-background);
+      border-radius:20px;
+      box-shadow:0 12px 30px var(--shadow-light);
+      padding:25px;
+      overflow: hidden;
     }
 
-    /* Header & Banner */
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      margin-bottom:25px;
-      flex-wrap: wrap;
-    }
     .banner{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      background: linear-gradient(135deg, #FFAB91 0%, #FFCCBC 100%); /* Softer gradient */
-      border-radius:16px;
+      background:linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      border-radius:18px;
       padding:20px;
-      box-shadow: 0 8px 25px rgba(255,87,34,0.2);
-      color: #fff;
-      flex-grow: 1;
+      text-align:center;
+      color:#fff;
+      margin-bottom:25px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://i.imgur.com/v4XqN9R.jpg') no-repeat center center / cover;
+      opacity: 0.15; /* Subtle overlay of the image */
+      border-radius: inherit;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
     }
     .banner img{
       height:80px;
-      width: 80px;
-      border-radius:12px;
-      object-fit:cover;
-      border: 3px solid rgba(255,255,255,0.3);
+      width:80px;
+      border-radius:50%; /* Circular image */
+      border:3px solid rgba(255,255,255,0.7);
+      object-fit: cover;
+      margin-bottom:10px;
     }
     .banner h1{
+      margin:10px 0 5px;
+      font-size:22px;
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .banner p{
+      font-size:15px;
       margin:0;
-      font-size:24px;
-      line-height:1.2;
-      color: #fff;
-      font-weight: 700;
-    }
-    .greeting{
-      font-weight:600;
-      color: rgba(255,255,255,0.9);
-      display:block;
-      font-size:16px;
-      margin-bottom: 5px;
-    }
-    .banner p.sub{
-        color: rgba(255,255,255,0.9);
-        font-size: 14px;
-        margin-top: 8px;
+      opacity: 0.9;
     }
 
-    /* Hero Section */
-    .hero{
-      margin:30px 0;
-      padding:25px;
-      border-radius:18px;
-      background:var(--card);
-      box-shadow:0 10px 35px rgba(0,0,0,0.05);
-      display:flex;
-      gap:30px;
-      align-items:flex-start; /* Align items to the top */
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
     }
-    .hero-left{
-      flex:3; /* Give more space to the left content */
-      min-width: 300px;
-    }
-    .hero-right{
-      flex:1;
-      min-width: 250px;
-      background: #FFFDE7; /* Light yellow background for contrast */
-      padding: 20px;
-      border-radius: 14px;
-      border: 1px dashed var(--accent-light);
-      box-shadow: inset 0 2px 10px rgba(0,0,0,0.03);
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+      width: 50px;
+      height: 3px;
+      background: var(--secondary-color);
+      border-radius: 2px;
     }
 
-    /* Typography */
-    .headline{
-      font-size:32px;
-      margin:0 0 10px 0;
-      line-height:1.1;
-      background:linear-gradient(90deg, #FF5722, #FF9800, #FFC107); /* More vibrant gradient */
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-      filter: drop-shadow(0 4px 12px rgba(255,87,34,0.2));
-      font-weight: 700;
-    }
-    .sub{
-      color:var(--text-muted);
-      margin:0 0 15px 0;
-      font-size: 15px;
-    }
-    p.muted{
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    /* SIM forms grid */
-    .sim-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); /* Slightly larger min-width */
-      gap:20px;
-      margin-top:20px;
-    }
     .sim-card{
-      background:var(--card);
-      border-radius:14px;
-      padding:18px;
-      border:1px solid var(--border-light);
-      box-shadow:0 6px 20px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background:var(--card-background);
+      border:1px solid var(--border-color);
+      border-radius:15px;
+      padding:20px;
+      margin-bottom:20px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
     }
     .sim-card:hover {
-      transform: translateY(-3px);
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      transform: translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
     }
     .sim-top{
       display:flex;
       align-items:center;
-      gap:12px;
-      margin-bottom: 12px;
+      gap:15px;
+      margin-bottom:15px;
     }
     .sim-top img{
       height:50px;
       width:50px;
-      object-fit:contain;
       border-radius:10px;
-      background:#fff;
-      padding:8px;
-      border:1px solid var(--border-light);
+      padding:7px;
+      border:1px solid var(--border-color);
+      background: #f9f9f9;
+      object-fit: contain;
     }
-    .sim-top div strong{
-      font-size: 16px;
-      font-weight: 600;
+    .sim-info strong{
+      font-size:16px;
+      color:var(--text-dark);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .sim-info small{
+      font-size:13px;
+      color:var(--text-muted);
     }
     .phone-input{
       width:100%;
-      padding:12px;
-      border-radius:10px;
-      border:1px solid var(--border-light);
+      padding:12px 15px;
       margin-top:10px;
-      font-size: 15px;
-      transition: border-color 0.2s ease;
+      border:1px solid var(--border-color);
+      border-radius:10px;
+      font-size:14px;
+      transition: border-color 0.3s ease;
     }
     .phone-input:focus {
       outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(255,87,34,0.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(255,112,67,0.2);
     }
     .btn{
-      display:inline-block;
-      padding:12px 20px;
-      border-radius:10px;
+      width:100%;
+      margin-top:15px;
+      padding:14px;
       border:none;
-      background:var(--accent);
+      border-radius:10px;
+      background:var(--primary-color);
       color:#fff;
       font-weight:600;
       cursor:pointer;
-      transition: background 0.2s ease, transform 0.1s ease;
-      font-size: 15px;
+      font-size:15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
     .btn:hover{
-      background: #E64A19;
-      transform: translateY(-1px);
+      background: var(--secondary-color);
+      box-shadow: 0 4px 10px rgba(255,112,67,0.3);
+      transform: translateY(-2px);
     }
-    .btn:active{
-      transform: translateY(0);
-    }
-    .btn.secondary{
-      background:var(--border-light);
-      color:var(--text-dark);
+    .btn.secondary {
+      background: #9E9E9E; /* Gray for sponsored links */
     }
     .btn.secondary:hover {
-        background: #D3D3D3;
+      background: #616161;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .claim-box{
-      margin-top:15px;
-      padding:15px;
-      border-radius:12px;
-      background: rgba(255,87,34,0.05); /* Light accent background */
-      border:1px dashed var(--accent-light);
-    }
-    .share-row{
-      display:flex;
-      gap:10px;
-      margin-top:10px;
-      flex-wrap:wrap;
-    }
-    .share-row button.small{
-      padding:8px 14px;
-      border-radius:8px;
+      margin-top:12px;
       font-size:13px;
-      background: var(--accent-light);
-      color: #fff;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s ease;
+      color:var(--text-muted);
+      text-align: center;
     }
-    .share-row button.small:hover {
-        background: #FF7043;
-    }
-    .share-row button.small:disabled {
-        background: var(--border-light);
-        color: var(--text-muted);
-        cursor: not-allowed;
-    }
-    .claim-box strong{
-        color: var(--accent);
+    .claim-box strong {
+      color: var(--primary-color);
     }
 
-    /* Trust Banner */
-    .trust-banner{
-      display:flex;
-      align-items:center;
-      gap:15px;
-      justify-content:center;
-      padding:15px;
-      border-radius:14px;
-      background: #E8F5E9; /* Light green for trust */
-      margin-top:18px;
-      border:1px solid #C8E6C9;
-      box-shadow: inset 0 2px 8px rgba(0,150,0,0.05);
-    }
-    .trust-banner div strong{
-        font-weight: 600;
-        color: #388E3C; /* Darker green for text */
-    }
-    .trust-banner div.muted{
-        font-size: 12px;
-        color: #66BB6A;
-    }
-
-    /* Footer */
-    footer{
+    .ads{
       margin-top:30px;
       text-align:center;
-      color:var(--text-muted);
-      font-size:13px;
       padding-top: 20px;
-      border-top: 1px solid var(--border-light);
+      border-top: 1px dashed var(--border-color);
     }
-    .logo-row{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:center;
-      margin-top: 20px;
-      padding-bottom: 20px;
+    .ads p{
+      font-weight:600;
+      color:var(--text-muted);
+      margin-bottom: 15px;
+      font-size: 14px;
     }
-    .logo-row img{
-      height:45px;
-      border-radius:10px;
-      padding:8px;
-      background:#fff;
-      border:1px solid var(--border-light);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-    .logo-row img:hover {
-        transform: translateY(-2px);
+    .ads .btn {
+      margin-bottom: 10px;
     }
 
-    /* Ad Scripts section */
-    #adScripts{
-        margin-top: 25px;
-        background: #F5F5F5;
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px dashed var(--border-light);
-        text-align: center;
-    }
-    #adScripts p{
-        margin: 0 0 10px 0;
-        font-size: 13px;
-        color: var(--text-muted);
-    }
-
-    /* Mobile adjustments */
-    @media (max-width:768px){
-      .wrap{
-        padding: 20px;
-      }
-      .banner{
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-      .banner img{
-        height: 70px;
-        width: 70px;
-      }
-      .banner h1{
-        font-size: 20px;
-      }
-      .greeting{
-        font-size: 14px;
-      }
-      .hero{
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-      }
-      .hero-left, .hero-right{
-        min-width: unset;
-        width: 100%;
-      }
-      .hero-right{
-        order: -1; /* Place right column above left on mobile */
-      }
-      .headline{
-        font-size: 26px;
-      }
-      .sim-grid{
-        grid-template-columns: 1fr;
-      }
-      .share-row button.small{
-          width: 100%; /* Full width buttons on small screens */
-      }
+    footer{
+      text-align:center;
+      font-size:12px;
+      color:var(--text-muted);
+      margin-top:30px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border-color);
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-
-    <!-- Banner / OG image preview (visible) -->
-    <header>
-      <div class="banner" role="banner">
-        <img src="https://i.imgur.com/v4XqN9R.jpg" alt="Durga Puja Banner" />
-        <div>
-          <span class="greeting">শারদীয় শুভেচ্ছা — শুভ দুর্গাপূজা!</span>
-          <h1>সব সিমে সীমিত সময়ের জন্য ৫০GB বোনাস 🎉</h1>
-          <p class="sub">শর্ত: মেসেঞ্জারে ৫ জনকে রেফার করতে হবে। প্রতিটি সিমের আলাদা ফর্ম নিচে আছে — আপনার সিম নির্বাচন করে নম্বর দিন।</p>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <div class="hero" role="region" aria-label="offer hero">
-      <div class="hero-left">
-        <p class="muted">অফার সময়সীমা সীমিত — প্রথমে যাচাই করুন আপনার সিম-এর জন্য ফর্ম পূরণ করে</p>
-        <div class="sim-grid" id="simGrid">
-          <!-- SIM cards inserted by JS -->
-        </div>
-
-        <!-- Ads direct links (user provided) -->
-        <div style="margin-top:25px">
-          <p class="muted" style="margin-bottom: 10px; font-weight: 500;">Sponsored / প্রমো লিংক</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn secondary" href="https://encasehighlight.com/ah0zb9pr?key=099edeb009026022e9187f9de4def94d" target="_blank" rel="noopener">Promoted Link 1</a>
-            <a class="btn secondary" href="https://encasehighlight.com/vsnrrkqbrb?key=875a394a0867b7d59e2cb13e1f009402" target="_blank" rel="noopener">Promoted Link 2</a>
-          </div>
-        </div>
-
-        <!-- Ad scripts (user provided) -->
-        <div id="adScripts">
-          <p>বিজ্ঞাপন</p>
-          <script type='text/javascript' src='//encasehighlight.com/90/84/6e/90846e4a77416c8ed48acf942330cbc6.js'></script>
-
-          <script type="text/javascript">
-            atOptions = {
-              'key' : 'da5e724c3893c8b065d732a5454f8e27',
-              'format' : 'iframe',
-              'height' : 50,
-              'width' : 320,
-              'params' : {}
-            };
-          </script>
-          <script type="text/javascript" src="//encasehighlight.com/da5e724c3893c8b065d732a5454f8e27/invoke.js"></script>
-          <script async="async" data-cfasync="false" src="//encasehighlight.com/72d09efd32735ddbfde1d09ee965eafe/invoke.js"></script>
-          <div id="container-72d09efd32735ddbfde1d09ee965eafe"></div>
-        </div>
-
-      </div>
-
-      <div class="hero-right">
-        <div style="text-align:center;">
-          <div style="font-weight:700;font-size:16px; margin-bottom: 10px; color: var(--accent);">আপনার রেফারাল স্ট্যাটাস</div>
-          <div id="stats" style="margin-top:8px">
-            <div class="muted">অবশ্যই Messenger ব্যবহার করুন — ৫ জন রেফার করলে ক্লেইম উপলব্ধ হবে।</div>
-            <div style="margin-top:12px; font-size: 18px;">
-              <strong id="totalRef" style="font-size: 2.2em; color: var(--accent);">0</strong> <br/> রেফার করা হয়েছে
-            </div>
-          </div>
-
-          <div class="trust-banner" style="margin-top:20px">
-            <div>
-              <div style="font-weight:700">বিশ্বাসযোগ্যতা</div>
-              <div class="muted" style="font-size:12px">স্বচ্ছতার জন্য নম্বর যাচাইয়ের অপশন যোগ করুন (backend)।</div>
-            </div>
-          </div>
-        </div>
+    <!-- Banner -->
+    <div class="banner">
+      <div class="banner-content">
+        <img src="https://i.imgur.com/v4XqN9R.jpg" alt="Durga Puja Banner"/>
+        <h1>শারদীয় দুর্গোৎসব 🎉 ৫০GB বোনাস</h1>
+        <p>শর্ত: মেসেঞ্জারে ৫ জনকে রেফার করুন এবং আপনার সিমের ফর্ম পূরণ করুন।</p>
       </div>
     </div>
 
-    <!-- footer logos (user provided logos used here) -->
-    <div style="margin-top:25px">
-      <div class="logo-row" aria-hidden="true">
-        <img src="https://i.imgur.com/Ac6XVOj.png" alt="logo1" />
-        <img src="https://i.imgur.com/XG1qraz.png" alt="logo2" />
-        <img src="https://i.imgur.com/LY1OqqI.png" alt="logo3" />
-        <img src="https://i.imgur.com/HYmZwuk.png" alt="logo4" />
-        <img src="https://i.imgur.com/13VaS5A.png" alt="logo5" />
+    <h2 class="section-title">আপনার সিম নির্বাচন করুন</h2>
+
+    <!-- SIM forms -->
+    <div id="simGrid"></div>
+
+    <!-- Ads Section -->
+    <div class="ads">
+      <p>Sponsored Links</p>
+      <a class="btn secondary" href="https://encasehighlight.com/ah0zb9pr?key=099edeb009026022e9187f9de4def94d" target="_blank"><i class="fas fa-external-link-alt"></i> Promoted Link 1</a>
+      <a class="btn secondary" href="https://encasehighlight.com/vsnrrkqbrb?key=875a394a0867b7d59e2cb13e1f009402" target="_blank"><i class="fas fa-external-link-alt"></i> Promoted Link 2</a>
+      <div style="margin-top:20px;background:#f5f5f5;padding:15px;border-radius:10px;border:1px solid #eee;">
+        <!-- Ad scripts, kept as is but styled for better integration -->
+        <script type='text/javascript' src='//encasehighlight.com/90/84/6e/90846e4a77416c8ed48acf942330cbc6.js'></script>
+        <script type="text/javascript">
+          atOptions = {
+            'key' : 'da5e724c3893c8b065d732a5454f8e27',
+            'format' : 'iframe','height' : 50,'width' : 320,'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//encasehighlight.com/da5e724c3893c8b065d732a5454f8e27/invoke.js"></script>
+        <script async src="//encasehighlight.com/72d09efd32735ddbfde1d09ee965eafe/invoke.js"></script>
       </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-      © <span id="year"></span> শুভ দুর্গাপূজা — ৫০GB বোনাস অফার। <br />
-      <small class="muted">নোট: এই পেজটি ডেমো হিসেবে front-end ভ্যালিডেশন ব্যবহার করে; প্রোডাকশনে server-side ভেরিফিকেশন আবশ্যক।</small>
+      © <span id="year"></span> শুভ দুর্গাপূজা — ৫০GB বোনাস অফার। সকল অধিকার সংরক্ষিত।
     </footer>
   </div>
-
-  <!-- Main JS -->
   <script>
-    // configuration: logos + display names (we use provided imgur links)
     const SIMS = [
-      {id:'sim1', name:'SIM A', logo:'https://i.imgur.com/Ac6XVOj.png'},
-      {id:'sim2', name:'SIM B', logo:'https://i.imgur.com/XG1qraz.png'},
-      {id:'sim3', name:'SIM C', logo:'https://i.imgur.com/LY1OqqI.png'},
-      {id:'sim4', name:'SIM D', logo:'https://i.imgur.com/HYmZwuk.png'},
-      {id:'sim5', name:'SIM E', logo:'https://i.imgur.com/13VaS5A.png'}
+      {id:'gp', name:'Grameenphone', logo:'https://i.imgur.com/Ac6XVOj.png'},
+      {id:'robi', name:'Robi', logo:'https://i.imgur.com/XG1qraz.png'},
+      {id:'bl', name:'Banglalink', logo:'https://i.imgur.com/LY1OqqI.png'},
+      {id:'teletalk', name:'Teletalk', logo:'https://i.imgur.com/HYmZwuk.png'},
+      {id:'airtel', name:'Airtel', logo:'https://i.imgur.com/13VaS5A.png'}
     ];
 
-    // landing page canonical URL (important for share links & og previews). Replace with your real hosted URL.
-    const LANDING_URL = window.location.href.split('#')[0];
-
-    // init
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // build sim cards
-    const simGrid = document.getElementById('simGrid');
-
+    const simGrid=document.getElementById('simGrid');
     SIMS.forEach(sim=>{
-      const card = document.createElement('div');
-      card.className = 'sim-card';
-      card.innerHTML = `
+      const card=document.createElement('div');
+      card.className='sim-card';
+      card.innerHTML=`
         <div class="sim-top">
-          <img src="${sim.logo}" alt="${sim.name} logo" />
-          <div>
-            <strong>${sim.name}</strong>
-            <div class="muted" style="font-size:13px">50GB শারদীয় বোনাস</div>
-          </div>
+          <img src="${sim.logo}" alt="${sim.name} logo"/>
+          <div class="sim-info"><strong>${sim.name}</strong><br><small>৫০GB শারদীয় বোনাস</small></div>
         </div>
-
-        <div style="margin-top:8px">
-          <input class="phone-input" placeholder="০১XXXXXXXXX - আপনার ফোন নম্বর" data-sim="${sim.id}" id="phone_${sim.id}" />
-          <div style="display:flex;gap:10px;margin-top:12px; flex-wrap: wrap;">
-            <button class="btn" data-action="submit" data-sim="${sim.id}">Submit নম্বর</button>
-            <button class="btn secondary" data-action="share" data-sim="${sim.id}">Refer (Messenger)</button>
-          </div>
-
-          <div class="claim-box" id="claim_${sim.id}">
-            <div class="muted">Referral count: <strong id="count_${sim.id}">0</strong></div>
-            <div class="share-row">
-              <button class="small" data-action="copy" data-sim="${sim.id}">Copy Referral Link</button>
-              <button class="small" data-action="claim" data-sim="${sim.id}" disabled>Claim Bonus</button>
-            </div>
-          </div>
-        </div>
+        <input class="phone-input" type="tel" placeholder="০১XXXXXXXXX - আপনার ফোন নম্বর" pattern="01[3-9]\\d{8}" required/>
+        <button class="btn" onclick="referMessenger('${sim.name}')"><i class="fab fa-facebook-messenger"></i> Messenger এ রেফার করুন</button>
+        <div class="claim-box">বর্তমান রেফারেল সংখ্যা: <strong>0</strong> / 5</div>
       `;
       simGrid.appendChild(card);
     });
 
-    // helper: storage keys
-    function phoneKey(simId){ return `offer_phone_${simId}`; }
-    function refKey(simId){ return `offer_refs_${simId}`; }
-
-    // load counts from localStorage
-    function loadCounts(){
-      let total = 0;
-      SIMS.forEach(s=>{
-        const c = parseInt(localStorage.getItem(refKey(s.id))||'0',10);
-        document.getElementById('count_'+s.id).textContent = c;
-        total += c;
-        const claimBtn = document.querySelector(`[data-action="claim"][data-sim="${s.id}"]`);
-        if(claimBtn){
-          claimBtn.disabled = c < 5;
-        }
-      });
-      document.getElementById('totalRef').textContent = total;
-    }
-    loadCounts();
-
-    // event delegation
-    document.addEventListener('click', (e)=>{
-      const btn = e.target.closest('button');
-      if(!btn) return;
-      const action = btn.getAttribute('data-action');
-      const simId = btn.getAttribute('data-sim');
-      if(action === 'submit'){
-        const input = document.getElementById('phone_'+simId);
-        const val = (input.value||'').trim();
-        // simple validation: 11 digits starting with 01
-        const cleaned = val.replace(/\D/g,'');
-        if(!/^01\d{9}$/.test(cleaned)){
-          alert('সঠিক মোবাইল নম্বর দিন (বাংলাদেশ ফরম্যাট: 01XXXXXXXXX)।');
-          return;
-        }
-        // store (frontend demo). Replace with fetch() to your server in production.
-        localStorage.setItem(phoneKey(simId), cleaned);
-        alert('ধন্যবাদ — আপনার নম্বর রেকর্ড করা হয়েছে। এখন ৫ জনকে রেফার করুন।');
-      }
-      else if(action === 'share'){
-        // create referral link that encodes simId + phone (if provided)
-        const phone = localStorage.getItem(phoneKey(simId)) || '';
-        const params = new URLSearchParams({sim: simId, phone: phone});
-        const referralLink = LANDING_URL + '?ref=' + encodeURIComponent(simId) + (phone?('&p='+phone):'');
-        // attempt to open Messenger app (mobile intent)
-        const messengerURL = `fb-messenger://share/?link=${encodeURIComponent(referralLink)}`;
-        const webFallback = `https://www.facebook.com/dialog/send?link=${encodeURIComponent(referralLink)}&app_id=0000000000&redirect_uri=${encodeURIComponent(LANDING_URL)}`; // app_id is a placeholder
-        
-        const openMessenger = () => {
-          window.location = messengerURL;
-          setTimeout(()=>{ 
-            if(confirm('Messenger খুলতে সমস্যা হলে, লিংক কপি করে ম্যানুয়ালি শেয়ার করুন?')) {
-              copyToClipboard(referralLink);
-              alert('Referral link কপি করা হয়েছে — Messenger/WhatsApp এ পাঠান।');
-            }
-          },900);
-        };
-        
-        if(navigator.share){
-          navigator.share({
-            title: '৫০GB বোনাস — শারদীয় শুভেচ্ছা',
-            text: 'আমি পেতে চলেছি ৫০GB বোনাস — আপনিও পেতে চান? আমার রেফারাল লিংক: ' + referralLink,
-            url: referralLink
-          }).then(()=>{ 
-            // We assume successful share here. In a real app, you'd get callback from Messenger/FB.
-            // For demo purposes, we can choose to record referral directly if user successfully shares via web share API.
-            // However, for consistency with Messenger, we'll let user manually confirm if referral is successful.
-            alert('লিংক শেয়ার করা হয়েছে! নিশ্চিত করুন যে আপনার বন্ধুরা এটি ব্যবহার করেছে।');
-            // recordReferral(simId); // Enable this if you want to increment immediately on web share API success
-          }).catch((error)=>{ 
-            console.error('Web Share failed:', error);
-            openMessenger(); 
-          });
-        } else {
-          openMessenger();
-        }
-      }
-      else if(action === 'copy'){
-        const phone = localStorage.getItem(phoneKey(simId)) || '';
-        const link = LANDING_URL + '?ref=' + encodeURIComponent(simId) + (phone?('&p='+phone):'');
-        copyToClipboard(link);
-        alert('Referral link কপি করা হয়েছে — Messenger/WhatsApp এ পাঠান।');
-      }
-      else if(action === 'claim'){
-        const refs = parseInt(localStorage.getItem(refKey(simId))||'0',10);
-        if(refs < 5){ alert('৫ জন রেফার করা প্রয়োজন।'); return; }
-        // In production: POST to server to initiate bonus claim -> server should validate.
-        alert('Claim request পাঠানো হলো। আপনি শিগগিরই ওয়েবসাইটের মাধ্যমে যাচাই করুন (demo)।');
-      }
-      loadCounts();
-    });
-
-    // helper: copy
-    function copyToClipboard(text){
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).catch(err => {
-          console.error('Failed to copy text using clipboard API: ', err);
-          fallbackCopyTextToClipboard(text);
-        });
-      } else {
-        fallbackCopyTextToClipboard(text);
-      }
+    function referMessenger(sim){
+      const url=window.location.href;
+      // For a more robust messenger share, you might need app-specific URLs
+      // or ensure the user is logged in. This is a basic attempt.
+      const messengerURL=`fb-messenger://share/?link=${encodeURIComponent(url)}&app_id=YOUR_APP_ID_HERE`; // Replace YOUR_APP_ID_HERE
+      window.location.href=messengerURL;
+      setTimeout(()=>{
+        alert(sim + ' এর রেফার লিংক Messenger এ শেয়ার করুন। রেফারেল সংখ্যা আপডেট হতে কিছু সময় লাগতে পারে।');
+      }, 800);
     }
 
-    function fallbackCopyTextToClipboard(text) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed'; // Avoid scrolling to bottom
-      ta.style.top = '0';
-      ta.style.left = '0';
-      ta.style.width = '1em';
-      ta.style.height = '1em';
-      ta.style.padding = '0';
-      ta.style.border = 'none';
-      ta.style.outline = 'none';
-      ta.style.boxShadow = 'none';
-      ta.style.background = 'transparent';
-      document.body.appendChild(ta);
-      ta.focus();
-      ta.select();
-      try {
-        document.execCommand('copy');
-      } catch (err) {
-        console.error('Fallback: Oops, unable to copy', err);
-      }
-      document.body.removeChild(ta);
-    }
-
-    // record referral — in demo we increment localStorage count
-    function recordReferral(simId){
-      const key = refKey(simId);
-      const cur = parseInt(localStorage.getItem(key) || '0',10);
-      localStorage.setItem(key, String(cur + 1));
-      loadCounts();
-      alert(`একজন নতুন রেফারেল রেকর্ড করা হয়েছে ${simId} এর জন্য!`); // For demo feedback
-    }
-
-    // For demo: If visitor opens page with ?ref=SIMX then we treat it as a referral hit.
-    (function handleIncomingRef(){
-      const urlParams = new URLSearchParams(window.location.search);
-      const ref = urlParams.get('ref');
-      if(ref){
-        // Treat this visit as a referral for that sim
-        // Check if this referral has already been counted for this session/user
-        const countedKey = `counted_ref_${ref}_${Date.now()}`; // More robust check
-        if(!sessionStorage.getItem(countedKey)) { // Only count once per session
-            recordReferral(ref);
-            sessionStorage.setItem(countedKey, 'true');
-        }
-      }
-    })();
-
-    // small UX: pressing Enter in phone input submits
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'Enter'){
-        const el = document.activeElement;
-        if(el && el.classList.contains('phone-input')){
-          const sim = el.getAttribute('data-sim');
-          document.querySelector(`[data-action="submit"][data-sim="${sim}"]`).click();
-        }
-      }
-    });
-
-    // IMPORTANT NOTE (displayed to admin/developer in console)
-    console.log("Note: This page is a front-end demo. For production you must: 1) Add server-side phone validation & OTP. 2) Store referrals server-side and prevent fraud. 3) Use the canonical landing URL for OG meta image preview.");
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
